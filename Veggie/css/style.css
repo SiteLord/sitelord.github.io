@@ -238,6 +238,31 @@ h2{
 .menu{
 	margin-bottom: 70px;
 }
+.contaner{
+	background-size: auto;
+}
+.dish1{
+	background: 
+	display: block;
+}
+.dish2{
+	background: url(../plate.png) no-repeat center;
+	display: none;
+}
+.dish3{
+	background: url(../keks.png) no-repeat center;
+	display: none;
+}
+.dish4{
+	background: url(../drink.png) no-repeat center;
+	background-size: contain;
+	display: none;
+}
+#d1{
+	border-bottom: 1px solid #555;
+}
+
+
 .footer{
 	background: url(../image/fruits.jpg) no-repeat top right;
 	width: 100%;

@@ -19,7 +19,8 @@ a{
 .container{
 	max-width: 1200px;
 	padding: 0;
-	box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	        box-sizing: content-box;
 }
 .row{
 	 
@@ -68,7 +69,8 @@ header .logo img:active{
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	list-style: none;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 .menu li{
 	padding: 30px;
@@ -273,8 +275,10 @@ main .row{
 .features{
 	margin-bottom: 80px;
 	padding: 0;
-	flex-basis: 300px;
-	flex-shrink: 0;
+	-ms-flex-preferred-size: 300px;
+	    flex-basis: 300px;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
 }
 @media screen and (max-width: 767px){
 	.features{
@@ -389,17 +393,24 @@ main span{
 	font-weight: normal;
 }
 .friends{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	padding-top: 46px;
 	padding-bottom: 51px;
 	padding-right: 30px;
 	padding-left: 30px;
 	border-top: 1px solid #dddddd;
 	border-bottom: 1px solid #dddddd;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin-bottom: 82px;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 .friends img{
 	opacity: 0.6;
@@ -475,14 +486,25 @@ iframe{
 	background-image: url(../image/insta-icon.png);
 }
 .contacts{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row-reverse;
-	flex-wrap: wrap;
-	align-items: center;
-	align-content: space-between;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	    -ms-flex-direction: row-reverse;
+	        flex-direction: row-reverse;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-line-pack: justify;
+	    align-content: space-between;
 }
 .friendship{
-	flex-grow: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 	padding-left: 140px;
 }
 .friendship b{
@@ -501,7 +523,10 @@ iframe{
 	z-index: 1;
 	top: 0;
 	left: 0;
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 	cursor: pointer;
 	display: none;
 }
@@ -520,11 +545,19 @@ iframe{
 	width: 100%;
 }
 .popup .form{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-content: space-around;
-	align-items: center;
-	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-ms-flex-line-pack: distribute;
+	    align-content: space-around;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 .popup .wrap{
 	width: 45%;
@@ -541,7 +574,9 @@ iframe{
 	margin-bottom: 10px;
 }
 .popup .wrap-area{
-	flex-grow: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 	min-width: 100px;
 }
 textarea{
@@ -597,14 +632,21 @@ textarea{
 	top: 13px;
 }
 .popup-x::before{
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
 .popup-x::after{
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 
 .user-none{
-	user-select: none;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 }
 
 

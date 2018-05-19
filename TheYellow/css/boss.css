@@ -285,6 +285,7 @@
 @media (max-width: 576px) {
   .player_main_video {
     margin: 0;
+    width: 100%;
   }
 
   .player_main_title {

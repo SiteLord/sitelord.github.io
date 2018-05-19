@@ -1,0 +1,17 @@
+.wrap {
+	margin: 0 auto;
+	max-width: 1020px;
+	position: relative;
+}
+@media (max-width: 1020px) {
+	.wrap {
+		padding-right: 2%;
+		padding-left: 2%;
+	}
+}
+@media (max-width: 640px) {
+	.wrap {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}

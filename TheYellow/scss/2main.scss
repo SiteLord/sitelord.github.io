@@ -1,0 +1,32 @@
+.player_main {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	&_video {
+		margin: 35px auto 70px;
+	}
+	&_title {
+		font-size: 63px;
+		text-align: center;
+		color: #fff;
+		flex-grow: 1;
+		text-transform: uppercase;
+		font-weight: normal;
+		&-yellow {
+			color: #f5c506;
+		}
+	}
+}
+@media (max-width: 1010px) {
+	.player_main_video {
+		order: 1;
+	}
+}
+@media (max-width: 576px) {
+	.player_main_video {
+		margin: 0;
+	}
+	.player_main_title {
+		margin: 0.2em 0;
+	}
+}

@@ -95,6 +95,7 @@
   text-decoration: none;
   color: #b99403;
   background-color: #f5c506;
+  text-align: center;
 }
 
 @-webkit-keyframes press {
@@ -236,12 +237,18 @@
   .svg {
     display: none;
   }
+  .link {
+    padding: 13px 6%;
+  }
 }
 
-@media (max-width: 455px) {
+@media (max-width: 460px) {
   .player_header {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+  }
+  .header_menu_list_items {
+    min-width: 96.984px;
   }
 }
 .player_main {

@@ -10,35 +10,79 @@
 			font-size: 1.25em;
 			line-height: 1.1rem;
 		}
-		p,a,h1 {
+		p,h1 {
 			padding: 5px;
 		}
 		a {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 100%;
 			text-decoration: none;
-			margin-right: 2em;
 			color: #311B92;
 			padding-bottom: 0;
+			box-sizing: border-box;
 		}
-		a:focus,
-		a:hover {
+		a:focus {
 			outline: 2px solid #311B92;
+		}
+		a:hover {
+			animation-name: showUp;
+			animation-duration: .5s;
+			animation-fill-mode: forwards;
+		}
+		a:hover .show {
+			display: block;
+			animation-name: move;
+			animation-duration: .5s;
+			animation-fill-mode: forwards;
 		}
 		a:active {
 			background-color: #311B92;
-			color: #fff;		
+			color: #fff;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+		}
+		.show {
+			font-size: 2.6em;
+			left: 100%;
+			top: 100%;
+			position: absolute;
+			color: #fff;
+			display: none;
+			line-height: 1.2;
+		}
+		.container {
+			width: 100%;
+			justify-items: center;
+			align-items: center;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 1em;
+		}
+		@keyframes showUp {
+			0% {border: none;}
+			100% {border: .6em solid #311B92;
+			border-bottom: 4rem solid #311B92;}
+		}
+		@keyframes move {
+			0% {left: 100%;}
+			100% { left: 0;}
 		}
 	</style>
 </head>
 <body>
-	<h1>Hello, World</h1>
-	<a href="Creative/" target="_blank">Creatives</a>
-	<a href="Pink/" target="_blank">Pink</a>
-	<a href="TheYellow/" target="_blank">TheYelow</a>
-	<a href="/Sedona" target="_blank">Sedona</a>
-	<a href="/Nerds" target="_blank">Nerds</a>
-	<a href="/Veggie" target="_blank">Veggie</a>
-	<br>
-	<br>
-	<a href="/Piano" target="_blank">Piano</a>
+	<h1>Портфолио</h1>
+	<div class="container">
+		<a href="Creative/" target="_blank"><span class="show">Creatives</span><img src="images/sitelord.github.io_Creative_ (1).png" alt=""></a>
+		<a href="Pink/" target="_blank"><span class="show">Pink</span><img src="images/sitelord.github.io_Pink_.png" alt=""></a>
+		<a href="TheYellow/" target="_blank"><span class="show">TheYelow</span><img src="images/sitelord.github.io_TheYellow_.png" alt=""></a>
+		<a href="/Sedona" target="_blank"><span class="show">Sedona</span><img src="images/sitelord.github.io_Sedona_ (1).png" alt=""></a>
+		<a href="/Nerds" target="_blank"><span class="show">Nerds</span><img src="images/sitelord.github.io_Nerds_.png" alt=""></a>
+		<a href="/Veggie" target="_blank"><span class="show">Veggie</span><img src="images/sitelord.github.io_Veggie_.png" alt=""></a>
+		<a href="/Piano" target="_blank"><span class="show">Piano</span><img src="images/sitelord.github.io_Piano_.png" alt=""></a>
+	</div>
 </body>
 </html>

@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
 	<style type="text/css">
 		body {
 			padding: 1rem 2em;
 			margin: 0;
-			font-family: 'Courgette', cursive;
+			font-family: 'Vidaloka', serif;
 			font-size: 1.25em;
 			line-height: 1.1rem;
 		}
-		p,h1 {
+		h1 {
+			text-transform: uppercase;
+			text-align: center;
+			margin-bottom: 1.5rem;
+			line-height: 1;
+		}
+		p {
 			padding: 5px;
 		}
 		a {
 			position: relative;
 			display: block;
-			width: 100%;
-			height: 100%;
 			text-decoration: none;
 			color: #311B92;
 			padding-bottom: 0;
 			box-sizing: border-box;
+			overflow: hidden;
 		}
 		a:focus {
-			outline: 2px solid #311B92;
+			outline: 2px solid blue;
 		}
 		a:hover {
-			animation-name: showUp;
-			animation-duration: .5s;
-			animation-fill-mode: forwards;
+			
 		}
 		a:hover .show {
-			display: block;
 			animation-name: move;
-			animation-duration: .5s;
+			animation-duration: 1s;
 			animation-fill-mode: forwards;
 		}
 		a:active {
@@ -46,43 +48,50 @@
 			height: 100%;
 		}
 		.show {
-			font-size: 2.6em;
-			left: 100%;
-			top: 100%;
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+			font-size: 4em;
+			opacity: .8;
+			z-index: 1;
 			position: absolute;
 			color: #fff;
-			display: none;
+			display: block;
+		}
+		.show span {
+			display: block;
+			width: 100%;
 			line-height: 1.2;
+			position: absolute;
+		    top: 50%;
+		    margin-top: -0.625em;
+		    text-align: center;
 		}
 		.container {
 			width: 100%;
 			justify-items: center;
-			align-items: center;
+			align-items: stretch;
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr;
-			grid-gap: 1em;
-		}
-		@keyframes showUp {
-			0% {border: none;}
-			100% {border: .6em solid #311B92;
-			border-bottom: 4rem solid #311B92;}
+			grid-gap: 1.5em;
 		}
 		@keyframes move {
-			0% {left: 100%;}
-			100% { left: 0;}
+			0% {opacity: .8;}
+			100% {opacity: 0;
+					display: none;}
 		}
 	</style>
 </head>
 <body>
 	<h1>Портфолио</h1>
 	<div class="container">
-		<a href="Creative/" target="_blank"><span class="show">Creatives</span><img src="images/sitelord.github.io_Creative_ (1).png" alt=""></a>
-		<a href="Pink/" target="_blank"><span class="show">Pink</span><img src="images/sitelord.github.io_Pink_.png" alt=""></a>
-		<a href="TheYellow/" target="_blank"><span class="show">TheYelow</span><img src="images/sitelord.github.io_TheYellow_.png" alt=""></a>
-		<a href="/Sedona" target="_blank"><span class="show">Sedona</span><img src="images/sitelord.github.io_Sedona_ (1).png" alt=""></a>
-		<a href="/Nerds" target="_blank"><span class="show">Nerds</span><img src="images/sitelord.github.io_Nerds_.png" alt=""></a>
-		<a href="/Veggie" target="_blank"><span class="show">Veggie</span><img src="images/sitelord.github.io_Veggie_.png" alt=""></a>
-		<a href="/Piano" target="_blank"><span class="show">Piano</span><img src="images/sitelord.github.io_Piano_.png" alt=""></a>
+		<a href="Creative/" target="_blank"><span class="show"><span>Creatives</span></span><img src="images/sitelord.github.io_Creative_ (1).png" alt=""></a>
+		<a href="Pink/" target="_blank"><span class="show"><span>Pink</span></span><img src="images/sitelord.github.io_Pink_.png" alt=""></a>
+		<a href="TheYellow/" target="_blank"><span class="show"><span>TheYelow</span></span><img src="images/sitelord.github.io_TheYellow_.png" alt=""></a>
+		<a href="/Sedona" target="_blank"><span class="show"><span>Sedona</span></span><img src="images/sitelord.github.io_Sedona_ (1).png" alt=""></a>
+		<a href="/Nerds" target="_blank"><span class="show"><span>Nerds</span></span><img src="images/sitelord.github.io_Nerds_.png" alt=""></a>
+		<a href="/Veggie" target="_blank"><span class="show"><span>Veggie</span></span><img src="images/sitelord.github.io_Veggie_.png" alt=""></a>
+		<a href="/Piano" target="_blank"><span class="show"><span>Piano</span></span><img src="images/sitelord.github.io_Piano_.png" alt=""></a>
 	</div>
 </body>
 </html>
